@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Contact An Administrator</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <div id="header"></div>
+        <div>
+            <h1>This is where you will be able to contact an administrator.</h1>
+        </div>
+        <form id="myform" onsubmit="emailjs.sendForm('default_service', 'template_5SC1hKhO', this); return false;" method="post">
+    
+            <label>From:</label>
+            <input type="text" name="from_name" />
+            
+            <label>To:</label>
+            <input type="text" name="to_name" />
+            
+            <label>Message</label>
+            <input type="text" name="message_html" />
+            
+            <br><br>
+            
+            <button>
+                Send
+            </button>
+        </form>
+
+
+
+        <div id="footer"></div>
+    <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+    <script src='js/app.js'></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init("user_j8GBSKFINcsoLyGLAeakv");
+       })();
+    </script>
+    </body>
+</html>
